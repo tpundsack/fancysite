@@ -37,25 +37,54 @@ div.desc {
 <div id="header" style="position:fixed;top:-5px;left:1%;background-color:#ffffff;border-radius:5px;width:98%;">
 <h1 style="width:80%;">RPG</h1>
 <h3 style="position:absolute;top:40%">By Tanner</h3>
-<h3 style="position:absolute;top:-10%;font-size:1em;width: 80%;" id="mar"><marquee>STATS APPEAR HERE</marquee></h3>
+<h3 style="position:absolute;top:-10%;font-size:1em;width: 60%;"id="mar">STATS APPEAR HERE</h3>
   <a href="#top"><button type="button" style = "position:absolute;left:95%;top:0%;width:5%;height:100%;">RETURN TO TOP</button></a>
   <button type="button" style = "position:absolute;left:90%;top:0%;width:5%;height:100%;">ITEMS</button>
   <button type="button" style = "position:absolute;left:85%;top:0%;width:5%;height:100%;">DEFEND</button>
   <button type="button" style = "position:absolute;left:80%;top:0%;width:5%;height:100%;">ATTACK</button>
 </div>
   <p id="top"><br><br><br><br>Welcome to the RPG<br>Stats do not save.</p>
-  <script>
+  <script>;
+  function cookieData() {
+  }
   document.documentElement.style.scrollBehavior = "smooth";
+  Document.cookie = "name='ok';hp=25;mhp=25;"
   hp = 15;
+  mhp = 15;
   at = 2;
   de = 2;
   lv = 1;
   xp = 0;
-  rxp = 0;
+  rxp = 10
+  cookieData();
   function mar(){
-  	document.getElementById("mar").innerHTML = "HP:"+hp+"| ATK:"+at+"| DEF:"+de+"| LV"+lv+": "+xp+"/"+rxp;
+  	eval(document.cookie);
+  	earnxp(1000000000000);
+  	document.getElementById("mar").innerHTML = "HP:"+hp+"/"+mhp+" | ATK:"+at+" | DEF:"+de+" | LV"+lv+": "+xp+"/"+rxp;
   }
-  	setInterval(mar,300)
+  function chatlog(text){
+  	var bepis = document.createElement("P");
+  	var e = document.createTextNode(text);
+  	bepis.appendChild(e);
+  	document.body.appendChild(bepis);
+  }
+  function hurtplr(dmg){
+  	hp = hp - dmg;
+  }
+  function earnxp(lp){
+  	xp = xp+lp;
+  	while (xp>=rxp){
+  		xp = xp - rxp;
+  		lv = lv + 1;
+  		if (Math.random()>0.5){
+  			at+=1;
+  		}else{
+  			de+=1;
+  		}
+  		rxp = Math.floor((rxp*2+100)/2);
+  	}
+  }
+  	setInterval(mar,100);
   </script>
 </body>
 </html>
