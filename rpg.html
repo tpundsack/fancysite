@@ -50,22 +50,22 @@ div.desc {
   hp = localStorage.getItem("hp");
     }else{hp=15;}
     if (localStorage.getItem("mhp")) {
-  hp = localStorage.getItem("mhp");
+  mhp = localStorage.getItem("mhp");
     }else{mhp=15;}
     if (localStorage.getItem("at")) {
-  hp = localStorage.getItem("at");
+  at = localStorage.getItem("at");
     }else{at=2;}
     if (localStorage.getItem("de")) {
-  hp = localStorage.getItem("de");
+  de = localStorage.getItem("de");
     }else{de=2;}
     if (localStorage.getItem("lv")) {
-  hp = localStorage.getItem("lv");
+  lv = localStorage.getItem("lv");
     }else{lv=1;}
     if (localStorage.getItem("xp")) {
-  hp = localStorage.getItem("xp");
+  xp = localStorage.getItem("xp");
     }else{xp=0;}
     if (localStorage.getItem("rxp")) {
-  hp = localStorage.getItem("rxp");
+  rxp = localStorage.getItem("rxp");
     }else{rxp=10;}
   function mar(){
   	document.getElementById("mar").innerHTML = "HP:"+hp+"/"+mhp+" | ATK:"+at+" | DEF:"+de+" | LV"+lv+": "+xp+"/"+rxp;
