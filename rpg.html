@@ -43,20 +43,39 @@ div.desc {
   <button type="button" style = "position:absolute;left:85%;top:0%;width:5%;height:100%;">DEFEND</button>
   <button type="button" style = "position:absolute;left:80%;top:0%;width:5%;height:100%;">ATTACK</button>
 </div>
-  <p id="top"><br><br><br><br>Welcome to the RPG<br>Stats do not save.</p>
+  <p id="top"><br><br><br><br>Welcome to the RPG<br>Stats only save locally.</p>
   <script>;
   document.documentElement.style.scrollBehavior = "smooth";
-  localStorage.setItem("hp",25)
+    if (localStorage.getItem("hp")) {
   hp = localStorage.getItem("hp");
-  mhp = 15;
-  at = 2;
-  de = 2;
-  lv = 1;
-  xp = 0;
-  rxp = 10
+    }else{hp=15;}
+    if (localStorage.getItem("mhp")) {
+  hp = localStorage.getItem("mhp");
+    }else{mhp=15;}
+    if (localStorage.getItem("at")) {
+  hp = localStorage.getItem("at");
+    }else{at=2;}
+    if (localStorage.getItem("de")) {
+  hp = localStorage.getItem("de");
+    }else{de=2;}
+    if (localStorage.getItem("lv")) {
+  hp = localStorage.getItem("lv");
+    }else{lv=1;}
+    if (localStorage.getItem("xp")) {
+  hp = localStorage.getItem("xp");
+    }else{xp=0;}
+    if (localStorage.getItem("rxp")) {
+  hp = localStorage.getItem("rxp");
+    }else{rxp=10;}
   function mar(){
-  	earnxp(1);
   	document.getElementById("mar").innerHTML = "HP:"+hp+"/"+mhp+" | ATK:"+at+" | DEF:"+de+" | LV"+lv+": "+xp+"/"+rxp;
+    localStorage.setItem("hp",hp)
+    localStorage.setItem("mhp",mhp)
+    localStorage.setItem("at",at)
+    localStorage.setItem("de",de)
+    localStorage.setItem("lv",lv)
+    localStorage.setItem("xp",xp)
+    localStorage.setItem("rxp",rxp)
   }
   function chatlog(text){
   	var bepis = document.createElement("P");
