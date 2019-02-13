@@ -45,21 +45,17 @@ div.desc {
 </div>
   <p id="top"><br><br><br><br>Welcome to the RPG<br>Stats do not save.</p>
   <script>;
-  function cookieData() {
-  }
   document.documentElement.style.scrollBehavior = "smooth";
-  Document.cookie = "name='ok';hp=25;mhp=25;"
-  hp = 15;
+  localStorage.setItem("hp",25)
+  hp = localStorage.getItem("hp");
   mhp = 15;
   at = 2;
   de = 2;
   lv = 1;
   xp = 0;
   rxp = 10
-  cookieData();
   function mar(){
-  	eval(document.cookie);
-  	earnxp(1000000000000);
+  	earnxp(1);
   	document.getElementById("mar").innerHTML = "HP:"+hp+"/"+mhp+" | ATK:"+at+" | DEF:"+de+" | LV"+lv+": "+xp+"/"+rxp;
   }
   function chatlog(text){
