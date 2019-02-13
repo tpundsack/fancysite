@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tanner's Fancy Website</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Comfortaa');
+div.gallery {
+  border: 1px solid #ccc;
+  filter: blur(10px);
+  transition: 0.5s;
+  width: 80%;
+  height: 100px;
+  /*float: left;*/
+}
+
+div.gallery:hover {
+  width:99%;
+  height: 300px;
+  border: 3px solid #777;
+  filter: blur(0px);
+}
+
+div.gallery iframe {
+  height: 80%;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+  *{font-family:"Comfortaa";border-radius:5px;}
+  p{text-align:center;}
+    body{background-color:#aaaaaa;}
+  </style>
+</head>
+<body>
+<div id="header" style="position:fixed;top:-5px;left:1%;background-color:#ffffff;border-radius:5px;width:98%;">
+<h1 style="width:80%;">RPG</h1>
+<h3 style="position:absolute;top:40%">By Tanner</h3>
+<h3 style="position:absolute;top:-10%;font-size:1em;width: 80%;" id="mar"><marquee>STATS APPEAR HERE</marquee></h3>
+  <a href="#top"><button type="button" style = "position:absolute;left:95%;top:0%;width:5%;height:100%;">RETURN TO TOP</button></a>
+  <button type="button" style = "position:absolute;left:90%;top:0%;width:5%;height:100%;">ITEMS</button>
+  <button type="button" style = "position:absolute;left:85%;top:0%;width:5%;height:100%;">DEFEND</button>
+  <button type="button" style = "position:absolute;left:80%;top:0%;width:5%;height:100%;">ATTACK</button>
+</div>
+  <p id="top"><br><br><br><br>Welcome to the RPG<br>Stats do not save.</p>
+  <script>
+  document.documentElement.style.scrollBehavior = "smooth";
+  hp = 15;
+  at = 2;
+  de = 2;
+  lv = 1;
+  xp = 0;
+  rxp = 0;
+  function mar(){
+  	document.getElementById("mar").innerHTML = "HP:"+hp+"| ATK:"+at+"| DEF:"+de+"| LV"+lv+": "+xp+"/"+rxp;
+  }
+  	setInterval(mar,300)
+  </script>
+</body>
+</html>
