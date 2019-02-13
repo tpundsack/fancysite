@@ -46,33 +46,34 @@ div.desc {
   <p id="top"><br><br><br><br>Welcome to the RPG<br>Stats only save locally.</p>
   <script>;
   document.documentElement.style.scrollBehavior = "smooth";
+    if (window.location.href == "https://tpundsack.github.io/fancysite/rpg#debug"){debug=True}
     if (localStorage.getItem("hp")) {
   hp = localStorage.getItem("hp");
-      chatlog("hp loaded.")
+      if (debug){chatlog("hp loaded.")}
     }else{hp=15;}
     if (localStorage.getItem("mhp")) {
   mhp = localStorage.getItem("mhp");
-      chatlog("mhp loaded.")
+      if (debug){chatlog("mhp loaded.")}
     }else{mhp=15;}
     if (localStorage.getItem("at")) {
   at = localStorage.getItem("at");
-      chatlog("at loaded.")
+      if (debug){chatlog("at loaded.")}
     }else{at=2;}
     if (localStorage.getItem("de")) {
   de = localStorage.getItem("de");
-      chatlog("de loaded.")
+      if (debug){chatlog("de loaded.")}
     }else{de=2;}
     if (localStorage.getItem("lv")) {
   lv = localStorage.getItem("lv");
-      chatlog("lv loaded.")
+      if (debug){chatlog("lv loaded.")}
     }else{lv=1;}
     if (localStorage.getItem("xp")) {
   xp = localStorage.getItem("xp");
-      chatlog("xp loaded.")
+      if (debug){chatlog("xp loaded.")}
     }else{xp=0;}
     if (localStorage.getItem("rxp")) {
   rxp = localStorage.getItem("rxp");
-      chatlog("rxp loaded.")
+      if (debug){chatlog("rxp loaded.")}
     }else{rxp=10;}
   function mar(){
   	document.getElementById("mar").innerHTML = "HP:"+hp+"/"+mhp+" | ATK:"+at+" | DEF:"+de+" | LV"+lv+": "+xp+"/"+rxp;
