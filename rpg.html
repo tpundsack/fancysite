@@ -48,31 +48,24 @@ div.desc {
   document.documentElement.style.scrollBehavior = "smooth";
     if (localStorage.getItem("hp")) {
   hp = localStorage.getItem("hp");
-      if (debug){chatlog("hp loaded.")}
     }else{hp=15;}
     if (localStorage.getItem("mhp")) {
   mhp = localStorage.getItem("mhp");
-      if (debug){chatlog("mhp loaded.")}
     }else{mhp=15;}
     if (localStorage.getItem("at")) {
   at = localStorage.getItem("at");
-      if (debug){chatlog("at loaded.")}
     }else{at=2;}
     if (localStorage.getItem("de")) {
   de = localStorage.getItem("de");
-      if (debug){chatlog("de loaded.")}
     }else{de=2;}
     if (localStorage.getItem("lv")) {
   lv = localStorage.getItem("lv");
-      if (debug){chatlog("lv loaded.")}
     }else{lv=1;}
     if (localStorage.getItem("xp")) {
   xp = localStorage.getItem("xp");
-      if (debug){chatlog("xp loaded.")}
     }else{xp=0;}
     if (localStorage.getItem("rxp")) {
   rxp = localStorage.getItem("rxp");
-      if (debug){chatlog("rxp loaded.")}
     }else{rxp=10;}
   function mar(){
     if (window.location.href == "https://tpundsack.github.io/fancysite/rpg#debug"){debug=true}else{debug=null}
@@ -85,6 +78,12 @@ div.desc {
     localStorage.setItem("xp",xp)
     localStorage.setItem("rxp",rxp)
   }
+    function genenem(lv){
+      ehp = Math.ceil(Math.random()*lv)+3
+      eat = Math.ceil(Math.random()*lv/3)+1
+      ede = Math.ceil(Math.random()*lv/3)+1
+      chatlog("Enemy generated with "+ehp+" hp, "+eat+" atk and "+ede+" def.")
+    }
   function chatlog(text){
   	var bepis = document.createElement("P");
   	var e = document.createTextNode(text);
