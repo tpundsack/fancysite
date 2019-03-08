@@ -47,11 +47,11 @@ div.post-message>div>p {
   </style>
 </head>
 <body>
-<div id="header" style="position:fixed;top:-5px;left:1%;border-radius:5px;width:98%;">
-  <h1 style="width:80%;">Header</h1>
+<div onmouseover="in();" onmouseout="out();" id="header" style="position:fixed;top:-5px;left:1%;border-radius:5px;width:98%;">
+  <h1 style="width:80%;" id="webTitle">Header</h1>
   <a href="#top"><button type="button" style = "position:absolute;left:90%;top:0%;width:10%;height:100%;font-family:'Comfortaa';" data-v-249e8882="" data-v-c5c50690="" class="button -primary -outline jolticon -icon jolticon-chevron-up" tabindex="3">
     TOP</button></a>
-<h3 style="position:absolute;top:-10%;font-size:1em;width: 90%;opacity:0;">MAR 8 2019: Grabbed the GameJolt style.</h3>
+<h3 style="position:absolute;top:-10%;font-size:1em;width: 90%;opacity:0;" id="updtTitle">MAR 8 2019: Grabbed the GameJolt style.</h3>
 </div>
   <br id="top"><br><br><br><br>
   <a href="#smbx"><button type="button" style = "width:100%;height:auto;" data-v-249e8882="" data-v-c5c50690="" class="button -primary -outline" tabindex="3">
@@ -95,6 +95,14 @@ Github is real nice.<br>You can find a link to my SMBX levels below, as well as 
   <br><br><br><br><div id="disqus_thread"></div>
 <script>
 
+  function in() {
+   document.getElementById("webTitle").style.opacity = 0;
+   document.getElementById("updtTitle").style.opacity = 1;
+  }
+  function out() {
+   document.getElementById("webTitle").style.opacity = 1;
+   document.getElementById("updtTitle").style.opacity = 0;
+  }
 /**
 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
