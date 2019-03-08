@@ -94,7 +94,7 @@ Github is real nice.<br>You can find a link to my SMBX levels below, as well as 
   <a href="https://www.youtube.com/channel/UCmVgXj_Nzu4p3CwqyMQnUvg">Personal Youtube</a>
   <br><br><br><br><div id="disqus_thread"></div>
 <script>
-
+var swap = false;
   function inr() {
    document.getElementById("webTitle").style.opacity = 0;
    document.getElementById("updtTitle").style.opacity = 1;
@@ -103,7 +103,7 @@ Github is real nice.<br>You can find a link to my SMBX levels below, as well as 
    document.getElementById("webTitle").style.opacity = 1;
    document.getElementById("updtTitle").style.opacity = 0;
   };
-  setInterval(function(){setTimeout(inr;setTimeout(outr,3000),3000)},6000);
+  setInterval(function(){if(swap==true){outr()}else{inr()}},1000);
 /**
 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
