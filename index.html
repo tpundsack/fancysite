@@ -47,7 +47,7 @@ div.post-message>div>p {
   </style>
 </head>
 <body>
-<div onmouseenter="inr()" onmouseout="outr()" id="header" style="position:fixed;top:-5px;left:1%;border-radius:5px;width:98%;">
+<div id="header" style="position:fixed;top:-5px;left:1%;border-radius:5px;width:98%;">
   <h1 style="width:80%;" id="webTitle">Header</h1>
   <a href="#top"><button type="button" style = "position:absolute;left:90%;top:0%;width:10%;height:100%;font-family:'Comfortaa';" data-v-249e8882="" data-v-c5c50690="" class="button -primary -outline jolticon -icon jolticon-chevron-up" tabindex="3">
     TOP</button></a>
@@ -103,8 +103,8 @@ Github is real nice.<br>You can find a link to my SMBX levels below, as well as 
    document.getElementById("webTitle").style.opacity = 1;
    document.getElementById("updtTitle").style.opacity = 0;
   };
-  setInterval(inr(),2000)
-  setInterval(setTimeout(outr(),1000),2000)
+  setInterval(inr(),2000);
+  setInterval(setTimeout(outr(),1000),2000);
 /**
 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
