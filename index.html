@@ -47,7 +47,7 @@ div.post-message>div>p {
   </style>
 </head>
 <body>
-<div onmouseenter="in();" onmouseout="out();" id="header" style="position:fixed;top:-5px;left:1%;border-radius:5px;width:98%;">
+<div onmouseenter="inr()" onmouseout="outr()" id="header" style="position:fixed;top:-5px;left:1%;border-radius:5px;width:98%;">
   <h1 style="width:80%;" id="webTitle">Header</h1>
   <a href="#top"><button type="button" style = "position:absolute;left:90%;top:0%;width:10%;height:100%;font-family:'Comfortaa';" data-v-249e8882="" data-v-c5c50690="" class="button -primary -outline jolticon -icon jolticon-chevron-up" tabindex="3">
     TOP</button></a>
@@ -95,11 +95,11 @@ Github is real nice.<br>You can find a link to my SMBX levels below, as well as 
   <br><br><br><br><div id="disqus_thread"></div>
 <script>
 
-  function in() {
+  function inr() {
    document.getElementById("webTitle").style.opacity = 0;
    document.getElementById("updtTitle").style.opacity = 1;
   };
-  function out() {
+  function outr() {
    document.getElementById("webTitle").style.opacity = 1;
    document.getElementById("updtTitle").style.opacity = 0;
   };
