@@ -78,7 +78,7 @@
       --theme-link-hover: var(--dark-theme-link-hover);
     }
   * {
-  font-family:Lato,Helvetica Neue,Helvetica,Arial,sans-serif;\
+  font-family:Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
   font-size: 1em !important;
 }
 .clearfix[data-v-249e8882]:after,
