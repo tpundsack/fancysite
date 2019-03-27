@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Material Design Lite -->
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css">
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>Tanner's Fancy Website</title>
   <link rel="stylesheet" href="gjl.css">
   <meta charset="UTF-8">
   <meta name="description" content="A really totally cool website using github pages.">
   <meta name="author" content="Tanner P.">
   <style>
-  @import url('https://fonts.googleapis.com/css?family=Comfortaa');
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
     a{
       text-decoration: inherit;
     }
-    #header {
-      background-color: #333333;}
 div.gallery {
   border: 1px solid #ccc;
   filter: blur(50px);
@@ -39,62 +42,121 @@ div.desc {
   padding: 15px;
   text-align: center;
 }
-  *{font-family:"Comfortaa" !important;border-radius:5px; transition: all 0.4s ease !important;}
-    body{background-color:#aaaaaa;}
+  *{font-family:"Roboto"; transition: all 0.4s ease !important;}
 .bgw {
   background-color: #aaaaaa !important;
     }
   </style>
 </head>
 <body>
-<div id="header" style="position:fixed;top:-5px;left:1%;border-radius:5px;width:98%;">
-  <h1 style="width:80%;" id="webTitle">Header</h1>
-  <a href="#top" onmousedown="clickr(1)"><button type="button" style = "position:absolute;left:90%;top:0%;width:10%;height:100%;font-family:'Comfortaa'!important;" data-v-249e8882="" data-v-c5c50690="" class="button -primary -outline" tabindex="3">
-    <span data-v-bf63f90e="" data-v-249e8882="" class="jolticon -icon jolticon-chevron-up"></span>TOP<span data-v-249e8882="" class="-badge" id="b1">0</span></button></a>
-<h3 style="position:absolute;top:-10%;font-size:1em;width: 90%;opacity:0;" id="updtTitle">MAR 12 2019: (Hopefully) Added email link.</h3>
-</div>
   <p id="top"></p><br><br><br><br><br>
-  <a href="#smbx"><button type="button" style = "width:100%;height:auto;" data-v-249e8882="" data-v-c5c50690="" class="button -primary -outline" tabindex="3">
-    SMBX LEVELS</button></a>
-  <a href="#ld"><button type="button" style = "width:100%;height:auto;" data-v-249e8882="" data-v-c5c50690="" class="button -primary -outline" tabindex="3">
-    LOST DATA</button></a>
-  <a href="#oth"><button type="button" style = "width:100%;height:auto;" data-v-249e8882="" data-v-c5c50690="" class="button -primary -outline" tabindex="3">
-    OTHER</button></a>
-  <p>Welcome to my super duper <em><B>ultra</B></em> cool website!</p>
-It's really cool i swear!<br>
-Github is real nice.<br>You can find a link to my SMBX levels below, as well as (eventually!) some screenshots of the levels!<br>
-<iframe src="https://widgets.gamejolt.com/package/v1?key=2VG4QEFg" frameborder="0" width="500" height="245"></iframe>
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="width:99.99%;">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Welcome</h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    <p>Welcome to my super duper <em><B>ultra</B></em> cool website!</p>
+  It's really cool i swear!<br>
+  Github is real nice.<br>You can find a link to my SMBX levels below, as well as (eventually!) some screenshots of the levels!<br>
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="#smbx">
+      Jump to SMBX
+    </a>
+  </div>
+</div>
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <H1 id="smbx"><br><br>SMBX (2.0) LEVELS</H1>
-  <h2>Tanner's NEW Levels v2 - <a href="https://drive.google.com/file/d/10_9NFTKUGsDHft4MNb8NyWh-BcBMFSlE/view?usp=sharing">DOWNLOAD</a></h2>
+  <b id="smbx" style="font-size:3em">SMBX Levels</b><br>
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp" style='width:100%'>
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Tanner's New Levels</h2>
+  </div>
+  <div class="mdl-card__supporting-text">
   My new set of levels after the old computer broke and everything was lost.
-  <h3>INCLUDES:</h3>
+  <h4>INCLUDES:</h4>
   5 Levels<br>
   1 Harder Difficulty Level<br>
   4 Puzzle Levels<br>
   1 Lost Level<br>
   A <em>Really Cool</em> Leveling System<br>
-  Track Name (bottom of the screen at the beginning of the level!)<br>
-  Episode Progress<br>
-  <div class="gallery"><iframe  width="100%" height="100%" src="https://www.youtube.com/embed/QEYLTrMEq6E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="desc">Me playing some levels. Poorly.</div></div>
+  Track Name (bottom of the screen at the beginning of the level!)<br><br>
+  <div id="progsmbx" class="mdl-progress mdl-js-progress"></div>
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    <a href="https://drive.google.com/file/d/10_9NFTKUGsDHft4MNb8NyWh-BcBMFSlE/view?usp=sharing"class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+      Download
+    </a>
+  </div>
+</div>
+
+
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br id="ld">
+    <br>
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp" style='width:100%'>
+    <div class="mdl-card__title">
+      <h2 class="mdl-card__title-text">Lost Data</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+    Files that were lost when the computer broke.<br>All of these are videos.<br>Also all SMBX levels.
+    </div>
+    <div class="mdl-card__actions mdl-card--border"><a href="https://youtu.be/Y36KiDzzAmg"><button class="mdl-button mdl-js-button mdl-button--icon" id='v1'>
+      <i class="material-icons">movie</i>
+    </button></a>
+    <div class="mdl-tooltip mdl-tooltip--large" for="v1">
+    Water Lotus
+    </div>
+    <a href="https://youtu.be/i7NqY-oxpxw"><button class="mdl-button mdl-js-button mdl-button--icon" id='v2'>
+      <i class="material-icons">movie</i>
+    </button></a>
+    <div class="mdl-tooltip mdl-tooltip--large" for="v2">
+    ok maybe this is too hard (Ghost House Level)
+    </div>
+    <a href="https://youtu.be/iYaCkJ1GxCw"><button class="mdl-button mdl-js-button mdl-button--icon" id='v3'>
+      <i class="material-icons">movie</i>
+    </button></a>
+    <div class="mdl-tooltip mdl-tooltip--large" for="v3">
+    Flower Desert
+    </div>
+    <a href="https://youtu.be/OgaGefgw-g0"><button class="mdl-button mdl-js-button mdl-button--icon" id='v4'>
+      <i class="material-icons">movie</i>
+    </button></a>
+    <div class="mdl-tooltip mdl-tooltip--large" for="v4">
+    Boss Test
+    </div>
+    <a href="https://youtu.be/8ju_Co5QoLU"><button class="mdl-button mdl-js-button mdl-button--icon" id='v5'>
+      <i class="material-icons">movie</i>
+    </button></a>
+    <div class="mdl-tooltip mdl-tooltip--large" for="v5">
+    Boss WIP
+    </div>
+    <a href="https://youtu.be/-_GHmzplqnU"><button class="mdl-button mdl-js-button mdl-button--icon" id='v6'>
+      <i class="material-icons">movie</i>
+    </button></a>
+    <div class="mdl-tooltip mdl-tooltip--large" for="v6">
+    Boss
+    </div>
+    </div>
+    </div>
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <h1 id="ld" style="margin:0px 0px 0px 0px;"><br><br>LOST DATA</h1>
-  <p style="font-size:0.8em;">Files that were lost when the computer broke.</p>
-  <div class="gallery"><iframe  width="100%" height="100%" src="https://www.youtube.com/embed/Y36KiDzzAmg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="desc">A level that was mainly themed around water.</div></div>
-  <div class="gallery"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/i7NqY-oxpxw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="desc">A long ghost-house level. Fairly challenging, and more than four times the length of the part shown in the video.</div></div>
-  <div class="gallery"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/iYaCkJ1GxCw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="desc">A level themed around a really tall desert and flowers that can be killed by fire and shoot cool fire balls. Original hub level shown in the beginning.</div></div>
-  <div class="gallery"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/OgaGefgw-g0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="desc">Test boss battle. Cannot access in the hub area.</div></div>
-  <div class="gallery"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/8ju_Co5QoLU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="desc">Boss battle. Was in a bonus stage.</div></div>
-  <div class="gallery"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/-_GHmzplqnU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="desc">Boss battle. Was the first big boss battle.</div></div>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <h1 id="oth" style="margin:0px 0px 0px 0px;"><br><br>GAMES/OTHER</h1>
-  <a href="https://research.google.com/semantris/?m=b&lt=8NsDRkpw94MtuL2">Semantris Leaderboard</a> <b>|</b>
-  <a href="words">Words?</a> <b>|</b>
-  <a href="https://github.com/tpundsack/fancysite">Github Repo</a> <b>|</b>
-  <a href="https://www.youtube.com/channel/UCmVgXj_Nzu4p3CwqyMQnUvg">Personal Youtube</a> <b>|</b> 
-  <a href="mailto:ambonmibable+website@gmail.com">Email Me</a>
-  <br><br><br><br><div class="bg" style="background-color:#aaaacc !Important;height:101%;"><div id="disqus_thread" style="width:98%;position:relative;top:6px;left:1%;"></div></div>
+  <b id="oth" style="font-size:3em">Games/Other</b><br>
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp" style='width:100%;min-height:50px'>
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Random Links</h2>
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    <a href="https://research.google.com/semantris/?m=b&lt=8NsDRkpw94MtuL2"class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Semantris Leaderboard</a>
+    <a href="words"class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Words?</a>
+    <a href="https://github.com/tpundsack/fancysite"class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Github Repo</a>
+    <a href="https://www.youtube.com/channel/UCmVgXj_Nzu4p3CwqyMQnUvg"class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Personal Youtube</a>
+    <a href="mailto:ambonmibable+website@gmail.com"class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Email Me</a>
+  </div>
+</div>
+  <br><br><br><br><div class="bg" style="height:101%;"><div id="disqus_thread" style="width:98%;position:relative;top:6px;left:1%;"></div></div>
 <script>
+document.querySelector('#progsmbx').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress(5);
+  });
   function clickr(nu){
     if (nu==1){
       if (parseInt(document.getElementById("b1").innerHTML)!=99){
@@ -134,5 +196,25 @@ s.setAttribute('data-timestamp', +new Date());
   </script>
   <script id="dsq-count-scr" src="//tntn.disqus.com/count.js" async></script>
   <a href="https://info.flagcounter.com/70wl"><img src="https://s01.flagcounter.com/mini/70wl/bg_000000/txt_FFFFFF/border_000000/flags_0/" alt="Flag Counter" border="0"></a>
+  <a href="#top" style="z-index:999 !important;"><button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" style="position:fixed;bottom:10px;right:10px">
+    <i class="material-icons">expand_less</i>
+  </button></a>
+  <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800" style="position:fixed;top:-5px;border-radius:5px;width:100%;">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title" style="position:relative;right:30px;">header</span>
+      <div class="mdl-layout-spacer"></div>
+      <button id="demo-menu-lower-right"
+            class="mdl-button mdl-js-button mdl-button--icon" style='position:relative;left:20px;top:5%'>
+      <i class="material-icons">menu</i>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+        for="demo-menu-lower-right">
+      <a href="#smbx"><li class="mdl-menu__item">SMBX</li></a>
+      <a href="#ld"><li class="mdl-menu__item">Lost Data</li></a>
+      <a href="#oth"><li class="mdl-menu__item">Other</li></a>
+      <li disabled class="mdl-menu__item">Coming Soon</li>
+    </ul>
+    </div>
+</header>
 </body>
 </html>
